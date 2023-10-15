@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>shecodes weather app</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcel Sandbox</title>
     <link href="./styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -16,14 +17,16 @@
   <body>
     <div class="card border-success mb-3">
       <div class="card-header bg-transparent border-success">
-        <form class="row g-3" id="search-form">
+        <form id="search-form" class="row g-3">
           <div class="col-auto">
             <label for="inputtext" class="visually-hidden">Text</label>
             <input
+              name="inputtext"
               type="text"
               class="form-control"
               placeholder="Type your city"
-              id="search-text-input"
+              id="city-input"
+              autocomplete="off"
             />
           </div>
           <div class="col-auto">
@@ -31,10 +34,11 @@
           </div>
           <h3 id="search-output"></h3>
         </form>
+
         <div class="card-body text-success">
-          <h2 class="card-title">+21</h2>
-          <p class="card-text">Sunny</p>
-          <h1>Kyiv, Ukraine</h1>
+          <h2 id="temperature" class="card-title"></h2>
+          <p id="description" class="card-text"></p>
+          <h1 id="city"></h1>
           <h3 id="date"></h3>
         </div>
       </div>
@@ -79,7 +83,7 @@
         </div>
       </div>
     </div>
-<div>
+    <div>
       <a href="https://github.com/YoliLancaster/shecodes">GitHub Source</a>
     </div>
     <script src="./index.js"></script>
